@@ -1,6 +1,35 @@
 Release Notes
 =============
 
+Release 0.9.2 - 2023/01/17
+--------------------------
+
+**(Hotfix)**
+
+- GEOPY-835: Fix iso-surface creation crash after multiple runs of marching cube.
+- GEOPY-734, 827, 828, 829, 833: Improve installation and fix SSL error encountered by some users.
+- GEOPY-814: Update copyright year
+- GEOPY-732: Fix crash on ui.json execution of non-inversion apps from ANALYST.
+- GEOPY-729: Add version information to main documentation page.
+
+
+Release 0.9.1 - 2022/12/13
+--------------------------
+
+**(Minor release)**
+
+This release fixes some of the issues encountered since releasing v0.9.0.
+
+- GEOPY-697, 694, 685: Better handling of Curve entity in inversions UI.
+- GEOPY-690: Re-implementation of the Z from topo option for DC-IP and MT inversions. Source and receivers are no longer draped onto the active (discretized) topography. To reduce numerical artifacts, the active set is instead augmented to include cells intercepted by receivers locations. The drape on top remains optional as for all other methods.
+- GEOPY-397: Re-simulation of tensor gravity and magnetics in the Flin Flon demo project.
+
+Also included are SimPEG specific changes:
+
+Fix error in the IRLS weights for MVI using the "total" gradient option.
+Fix error in the stashed regularization operator introduced in v0.9.0
+
+
 Release 0.9.0 - 2022/10/28
 --------------------------
 
@@ -29,7 +58,7 @@ New or revamped applications:
 Release 0.8.1 - 2022/09/15
 --------------------------
 
-**(Hot fix)**
+**(Hotfix)**
 
 - Fix corruption of geoh5 file for inversions from ANALYST runs.
 - Fix issues with iso-surface introduced by geoh5py v0.4.0 update.
@@ -59,7 +88,7 @@ General maintenance and bug fixes.
 Release 0.7.1 - 2022/05/03
 --------------------------
 
-**(Hot fix)**
+**(Hotfix)**
 
 Fix dependency on geoana v0.1.3
 
@@ -91,7 +120,7 @@ Bug fixes:
 Release 0.6.3 - 2022/02/09
 --------------------------
 
-**(Hot fixes)**
+**(Hotfixes)**
 
  - Fix limitations for unrecognized ui.json keys
  - Fix Mag/grav inversion crash for:
@@ -104,7 +133,7 @@ Release 0.6.3 - 2022/02/09
 Release 0.6.2 - 2022/01/05
 --------------------------
 
-**(Hot fixes)**
+**(Hotfixes)**
 
  - Fix Block Model origin issue in Data Transfer App
  - Fix optional tem checkbox in PeakFinder App
@@ -172,7 +201,7 @@ Please visit the `Getting Started <https://geoapps.readthedocs.io/en/latest/cont
 Release 0.5.1 - 2021/09/01
 --------------------------
 
-**(Hot fix)**
+**(Hotfix)**
 
 - Fix inversion application topography/receiver location from field.
 - Fix typos in docs
@@ -209,7 +238,7 @@ Release 0.4.1 - 2021/04/07
 --------------------------
 
 - Add unit tests on utils
-- Hot fixes for docs
+- Hotfixes for docs
 
 
 Release 0.4.0 - 2021/03/10
@@ -273,7 +302,7 @@ Previous Releases
 Release 0.2.10 - 2021/01/28
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-(Hot fix)
+(Hotfix)
 
 -  Broken dependencies (thanks Joel)
 
